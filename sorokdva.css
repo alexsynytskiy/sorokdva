@@ -1,0 +1,439 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+@font-face {
+    font-family: 'QanelasBold';
+    src: url('/fonts/Qanelas-Bold.eot');
+    src: url('/fonts/Qanelas-Bold.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Qanelas-Bold.woff') format('woff'),
+    url('/fonts/Qanelas-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'QanelasRegular';
+    src: url('/fonts/Qanelas-Regular.eot');
+    src: url('/fonts/Qanelas-Regular.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Qanelas-Regular.woff') format('woff'),
+    url('/fonts/Qanelas-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html {
+    min-height: 100%;
+    height: 100%;
+    background: #fff;
+}
+body {
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    font-family: Verdana, Arial sans-serif;
+    font-size: 1em;
+
+    background-image: url(/images/2.png), url(/images/4.png), url(/images/3.png);
+    background-repeat: no-repeat, no-repeat, repeat;
+    background-position: bottom left, top right, center;
+    background-size: 20%, 20%, 17%;
+}
+a {
+    color: #ffffff;
+}
+.error {
+    color: #ff0000;
+    font-size: 80%;
+    margin-top: 2px;
+}
+.wrapper {
+    position: relative;
+    height: 100vh;
+}
+.container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+.logo {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    z-index: 10;
+}
+.download {
+    position: absolute;
+    top: 170px;
+    left: 25px;
+    width: 140px;
+    height: 50px;
+    z-index: 10;
+}
+.blog {
+    position: absolute;
+    top: 230px;
+    left: 25px;
+    width: 140px;
+    height: 50px;
+    z-index: 10;
+}
+.eventlab {
+    top: 291px;
+    position: absolute;
+    left: 25px;
+    width: 140px;
+    height: 50px;
+    z-index: 10;
+}
+.address {
+    position: absolute;
+    display: inline-block;
+    right: 0;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+    font-size: 90%;
+}
+.address p {
+    margin: 7px 70px;
+    line-height: 1.5em;
+}
+.address p span {
+    white-space: nowrap;
+}
+.fb {
+    position: relative;
+    top: 5px;
+    margin-left: 15px;
+}
+
+.form {
+    position: absolute;
+    top: 100px;
+    left: 250px;
+    width: 400px;
+    height: 500px;
+}
+.form h3 {
+    font-size: 120%;
+    margin-bottom: 15px;
+}
+.form div {
+    margin-bottom: 10px;
+}
+.form label {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 90%;
+}
+.submit {
+    font-size: 140%;
+    margin-top: 10px;
+    text-transform: uppercase;
+    padding: 5px;
+}
+
+.box-scene {
+    perspective: 700;
+    -webkit-perspective: 700;
+    z-index: 999;
+}
+.box-scene:hover .box {
+    transform: rotateY(-90deg);
+    -webkit-transform: rotateY(-90deg);
+}
+.box {
+    width: 140px;
+    height: 160px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.4s ease-out;
+    transform-origin: 90px 90px -90px;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: all 0.4s ease-out;
+    -webkit-transform-origin: 90px 90px -90px;
+}
+
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: visible;
+    transform-origin: 0 0;
+    -webkit-backface-visibility: visible;
+    -webkit-transform-origin: 0 0;
+}
+.front {
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+.side {
+    transform: rotateY(90deg);
+    -webkit-transform: rotateY(90deg);
+    z-index: 1;
+    left: 140px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.logo-main {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 30px;
+}
+.logo-main img {
+    height: 390px;
+    margin: 0 auto;
+    display: block;
+}
+.logo-main .title-text {
+    color: #000;
+    font-size: 22px;
+    font-family: 'QanelasBold';
+    text-decoration: none;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    padding: 0 10px;
+}
+.logo-main .mission {
+    color: #fff;
+    background-color: #000;
+    font-size: 33px;
+    font-family: 'QanelasBold';
+    line-height: 37px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    padding: 0 10px;
+    text-transform: uppercase;
+    width: 186px;
+    margin: 7px auto;
+}
+.info-text {
+    max-width: 1075px;
+    margin-top: 80px;
+    color: #000;
+}
+.text-block-info {
+    width: 227px;
+    margin-bottom: 70px;
+}
+.text-block-info .title {
+    float: right;
+    font-size: 22px;
+    font-family: 'QanelasRegular';
+    text-decoration: none;
+    line-height: 27px;
+    text-align: center;
+    padding: 2px 10px;
+    text-transform: uppercase;
+    width: 196px;
+    text-align: right;
+    background-color: rgba(197, 197, 197, 0.4);
+}
+.text-block-info .symbol {
+    height: 58px;
+    width: 31px;
+    float: right;
+    background-image: url(/images/5.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 31px;
+}
+.text-block-info .text {
+    text-align: justify;
+    font-size: 14px;
+    margin-top: 15px;
+    font-family: 'QanelasRegular';
+    line-height: 15px;
+    letter-spacing: 0.04em;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.presentation {
+    background-image: url(/images/lighthouse_background.png);
+}
+
+#desktop-info-text {
+    display: block;
+}
+#mobile-info-text {
+    display: none;
+}
+@media (min-width: 1401px) {
+    .address {
+        bottom: 0;
+    }
+
+    .wrapper {
+        overflow: hidden;
+    }
+
+    .logo-main {
+        max-width: 525px;
+    }
+}
+@media (max-width: 1400px) {
+    .logo-main .title-text {
+        max-width: 525px;
+        margin: 0 auto;
+    }
+    .logo-main img {
+        margin: 190px auto 0;
+    }
+    .logo-main {
+        background-image: url(/images/2.png), url(/images/4.png), url(/images/3.png);
+        background-repeat: no-repeat, no-repeat, repeat;
+        background-position: bottom left, top right, center;
+        background-size: 20%, 20%, 17%;
+    }
+    body {
+        background: none;
+    }
+    #desktop-info-text {
+        display: none;
+    }
+
+    #mobile-info-text {
+        display: block;
+        max-width: 525px;
+    }
+
+    .text-block-info {
+        width: 160px;
+        margin: 0 auto;
+    }
+
+    .text-block-info .symbol {
+        height: 52px;
+        width: 25px;
+        float: right;
+        background-image: url(/images/5.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 21px;
+    }
+
+    .text-block-info .title {
+        min-height: 52px;
+        font-size: 17px;
+        font-family: 'QanelasRegular';
+        text-decoration: none;
+        line-height: 22px;
+        width: 135px;
+    }
+
+    #mobile-info-text .col-md-6 {
+        height: 272px;
+        overflow-y: hidden;
+    }
+
+    #mobile-info-text {
+        overflow: hidden;
+        margin-bottom: 30px;
+        margin-top: 30px; 
+        padding: 0;
+    }
+
+    .logo-main {
+        top: 0;
+    }
+
+    .video {
+        height: calc(100vh - 60px);
+    }
+
+    .header {
+        position: relative;
+        margin: 0 auto;
+        width: 340px;
+    }
+
+    .address {
+        font-size: 10px;
+        height: 60px;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .address p {
+        text-align: center;
+    }
+
+    .download {
+        top: 0;
+        left: 190px;
+    }
+
+    .blog {
+        top: 55px;
+        left: 190px;
+    }
+
+    .eventlab {
+        top: 110px;
+        left: 190px;
+    }
+}
